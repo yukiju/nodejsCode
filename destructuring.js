@@ -13,3 +13,32 @@ console.log(typeof a);
 let [d, e, ...f] = [4, 5, 6, 7, 8, 9];
 // d and e are just numbers but f is an array
 console.log(d, e, f);
+
+// Given two integer values, swap the values without creating a third variable.
+let x = 10;
+let y = 7;
+
+console.log(x, y);
+[x, y] = [y, x];
+console.log(x, y);
+
+/* Object Destructuring */
+/* Objects properties are not necessarily 'ordered'. if an order exists it is not
+significant, and in most cases is not known at all. Instead, properties are accessed
+by their key names. For this reason, destructuring an object utilizes their key 
+names by default */
+
+const person = {
+    firstName: 'Abby',
+    lastName: 'Adams',
+    birthdate: new Date()
+};
+
+//const { firstName, lastName, birthdate } = person;
+//const { firstName, birthdate } = person;
+//const { firstName: name, birthdate: date } = person;
+const { firstName: name, birthdate: date, ...extras } = person;
+//console.log(firstName, birthdate);
+console.log(name, date, extras);
+
+
