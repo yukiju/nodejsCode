@@ -20,7 +20,10 @@
     Variables declared with let and const can be in block scope in addition
     to the scopes available to var.
     3) Block Scope - The variable is scoped to a code block (if statement, loop, etc)
-*/
+
+    Hoisting - Hoisting is a behavior of variables declared using the 'var' keyword.
+    This behavior causes the declaration (but not the assignment) ---finish this
+    */
 
 var x = 20;
 var name = 'Abby';
@@ -38,10 +41,21 @@ const myFunction = function() {
     {
         var myVar = 'hello'; // var will be scoped to the function
         let myLet = 'world'; // let will be scoped to this block
+        console.log(myLet);
     }
 
-    console.log(myvar);
-    console.log(myLet); // Error - myLet is not defined
+    console.log(myVar);
+    //console.log(myLet); // Error - myLet is not defined
 }
 
-myFunction();
+//myFunction();
+
+const hoistingExample = function() {
+    console.log(myLet);
+    console.log('function starting');
+
+    var myVar = 'hello';
+    let myLet = 'world';
+}
+
+hoistingExample();
