@@ -26,9 +26,49 @@ const person = 'Abby';
 let favoriteFood;
 
 switch(person) {
+    case 'abby':
     case 'Abby':    favoriteFood = 'Ice Cream'; break;
     case 'Billy':   favoriteFood = 'Pizza';     break;
     case 'Cindy':   favoriteFood = 'Cupcakes';  break;
     default:        favoriteFood = 'Lobster';   break;
 }
 console.log(favoriteFood);
+
+// Ternary Operations
+// Ternary operations are a great way to include simple logic in an assignment
+// Ternary operations are terrible to express complicated logic in an  --finish this
+const catsOwned = 3;
+let name = 'Abby';
+//predicate ? true-result : false-result;
+name = catsOwned > 2 ? 'cat lady' : name;
+console.log(name);
+
+const x = value > 15 ? 7 < 2 ? value > 10 ? 2 > 5 : 7 : 9 : 10;
+console.log(x);
+
+/* Math Comparisons */
+/*
+    ==
+    ===
+    <
+    >
+    <=
+    >=
+    !=
+    !==
+*/
+
+/* Logical Operators */
+/*
+    == - equality
+    && - short-circuit and
+    & - and
+    || - or
+    | - or
+    ! - not
+*/
+function myFunc(a) {
+    console.log(a);
+    return true;
+}
+const b = myFunc('hello') | myFunc('World');
