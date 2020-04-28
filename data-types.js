@@ -4,6 +4,19 @@ let bool = true;
 let arr = [1, 2, 3];
 let date = Date();
 let symbol = Symbol('myApp');
+let myUndefined = undefined;
+let myNull = null;
+let bigInt = BigInt(100);
+let object = {
+    myKey: 'myValue',
+    a: 'Hello'
+};
+// Arrow Function
+//let myFunction = () => {};
+let myFunction = function() {
+
+}
+
 /*
     JavaScript Types
     1. Number = (Java Double)
@@ -11,6 +24,9 @@ let symbol = Symbol('myApp');
     3. boolean
     4. object
     5. symbol
+    6. undefined
+    7. bigInt
+    8. function (not necessarily a data type)
 
 */
 
@@ -20,3 +36,7 @@ console.log(typeof bool); //boolean
 console.log(typeof arr); // object
 console.log(typeof date); // string
 console.log(typeof symbol); // symbol
+console.log(typeof myUndefined); //undefined
+console.log(typeof myNull); //object
+console.log(typeof bigInt); // bigint
+console.log(typeof myObject);
