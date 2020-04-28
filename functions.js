@@ -1,4 +1,13 @@
 /*
+    Functions in JavaScript are often referred to as 'first class members' or
+    'first class objects'. These names are meant to constrast functions in JS from
+    methods in other languages such as Java or C#. In those languages functions
+    strictly attached to objects based on class definition and cannot be changed.
+    However, in JavaScript functions can be treated like any other variable. We
+    can assign a function to another variable. We can pass functions as parameters
+    to other functions. Functions themselves can return functions.
+
+/*
     Very simple usecase for a function, provide reusable
     logic that can be called on demand
 */
