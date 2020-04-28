@@ -22,7 +22,8 @@
     3) Block Scope - The variable is scoped to a code block (if statement, loop, etc)
 
     Hoisting - Hoisting is a behavior of variables declared using the 'var' keyword.
-    This behavior causes the declaration (but not the assignment) ---finish this
+    This behavior causes the declaration (but not the assignment) of a variable
+    to be lifted to the top of its scope.
     */
 
 var x = 20;
@@ -49,16 +50,16 @@ const myFunction = function() {
 }
 
 //myFunction();
-var myVar;
-console.log(myVar); // throws undefined - the code will keep running
+//var myVar;
+//console.log(myVar); // throws undefined - the code will keep running
 
 const hoistingExample = function() {
-    var myVar;
+    // var myVar;
     //console.log(myLet);
     console.log('function starting');
 
     var myVar = 'hello';
-    myVar = 'hello';
+    // myVar = 'hello';
     let myLet = 'world';
     console.log(myVar);
 }

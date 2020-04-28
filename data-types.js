@@ -40,4 +40,4 @@ console.log(typeof myUndefined); //undefined
 console.log(typeof myNull); //object
 console.log(typeof bigInt); // bigint
 console.log(typeof myObject); // object
-console.log(typeof myFunction); //
+console.log(typeof myFunction); // function
