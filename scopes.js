@@ -49,13 +49,18 @@ const myFunction = function() {
 }
 
 //myFunction();
+var myVar;
+console.log(myVar); // throws undefined - the code will keep running
 
 const hoistingExample = function() {
-    console.log(myLet);
+    var myVar;
+    //console.log(myLet);
     console.log('function starting');
 
     var myVar = 'hello';
+    myVar = 'hello';
     let myLet = 'world';
+    console.log(myVar);
 }
 
 hoistingExample();
