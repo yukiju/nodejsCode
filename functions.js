@@ -77,3 +77,13 @@ function parameterTest2(a, b, ...c) {
 // The rest operator gathers extra values into an array
 parameterTest2(1,2,3);
 parameterTest2(1,2,3,4,5,6,7);
+
+function defaultSum(a = 1, b = 2) {
+    return a + b;
+}
+console.log(defaultSum()); // 3
+console.log(defaultSum(5)); // 7 
+console.log(defaultSum(5, 10)); // 15
+console.log(undefined, 5);
+console.log("string", 5);
+console.log('hello'+5);
