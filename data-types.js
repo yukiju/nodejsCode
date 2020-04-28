@@ -7,7 +7,7 @@ let symbol = Symbol('myApp');
 let myUndefined = undefined;
 let myNull = null;
 let bigInt = BigInt(100);
-let object = {
+let myObject = {
     myKey: 'myValue',
     a: 'Hello'
 };
@@ -39,4 +39,5 @@ console.log(typeof symbol); // symbol
 console.log(typeof myUndefined); //undefined
 console.log(typeof myNull); //object
 console.log(typeof bigInt); // bigint
-console.log(typeof myObject);
+console.log(typeof myObject); // object
+console.log(typeof myFunction); //
