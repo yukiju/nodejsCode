@@ -44,3 +44,27 @@ function createObject(name, favoriteFood) {
 
 const myObject = createObject('Abby', 'Ice Cream');
 console.log(myObject);
+
+// Parameters
+// JavaScript does not care what or how many parameters you provide to it
+// These are all valid:
+sum();
+sum(4);
+sum(3, 5, 6);
+
+function parameterTest(a, b) {
+    console.log(a, b);
+}
+
+parameterTest(1, 2);
+parameterTest(1); // Any variable not present is considered undefined
+parameterTest(1, 2, 3); // We lose 3 - It can't be accessed
+
+// Rest Operator - Gathers extra values into a data structure
+// that can be utilized
+function parameterTest2(a, b, ...c) {
+    console.log(a, b, c);
+}
+// The rest operator gathers extra values into an array
+parameterTest2(1,2,3);
+parameterTest2(1,2,3,4,5,6,7);
