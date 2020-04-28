@@ -16,6 +16,5 @@ console.log(1 + '2'); // '12'
 console.log('1' + 2); // '12'
 console.log('1' + '2'); // '12'
 
-console.log(1 - '2'); // numeric convertion, if the type doesn't match it will
-// try to substract the amount of parameters
-console.log(1 - '2' - '3');
+console.log(1 - '2'); // n-1
+console.log(1 == '2' - '3'); // true
