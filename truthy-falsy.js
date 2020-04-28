@@ -32,7 +32,7 @@ console.log(c);
 const d = 'dog' || NaN;
 console.log(d);
 
-/* Default Operator */
+/* Default Operator - || */
 function sayHello(person) {
     // If they have a 'valid' firstName it will be used, otherwise it will be 'stranger'
     const firstName = person.firstName || 'stranger';
@@ -42,3 +42,24 @@ sayHello('Billy');
 sayHello({firstName: 'Abby'}); // Hello, Abby
 sayHello({}); // Hello, stranger
 sayHello({firstName: ''}); // Hello, stranger
+
+/* Guard Operator - && */
+/* 
+    Operations which access properties can be dangerous if we always assume that
+    the property must exist. If there are circumstances (for instance, data is
+    sourced from user or external API) in which the data does not exist, then
+    we should guard against TypeErrors caused by accessing properties of undefined
+*/
+//sayHello(undefined);
+function dueDatePassed(assignment) {
+    const dueDate = assignment.dueDate;
+    // we check that dueDate is not undefined if it's not then check the value
+    return (dueDate && dueDate.valueOf()) < new Date().valueOf();
+}
+const assignment = {
+    // ISO basic format YYYY-MM-DD
+    dueDate: new Date('2020-04-27')
+}
+console.log(`Assignment overdue: ${dueDatePassed(assignment)}`);
+console.log(`Assignment overdue: ${dueDatePassed({})}`);
+
