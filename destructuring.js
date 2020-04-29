@@ -31,7 +31,7 @@ names by default */
 const person = {
     firstName: 'Abby',
     lastName: 'Adams',
-    birthdate: new Date()
+    birthdate: new Date('2000-01-01')
 };
 
 //const { firstName, lastName, birthdate } = person;

@@ -11,7 +11,7 @@ let myObject = {
     myKey: 'myValue',
     a: 'Hello'
 };
-// Arrow Function
+// Arrow Function (lambda function)
 //let myFunction = () => {};
 let myFunction = function() {
 
