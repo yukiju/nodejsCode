@@ -14,11 +14,22 @@
 const myArr = [1,2,3,4,5,6,7,8,9,10];
 
 const val = myArr
-    .map((value) => value * 3)
+    .map((value) => value * 3) // [3, 6, 9, 12 ...]
     //.filter((value) => value % 2 == 0)
-    .filter((value) => value % 2 === 0)
+    .filter((value) => value % 2 === 0) // [6, 12, 18, 24, 30]
     //.forEach((value) => console.log(value));
-    .reduce((a, b) => Math.max(a,b));
+    //.reduce((a, b) => Math.max(a,b));
+    // 6, 12 -> 12
+    // 12, 18 -> 18
+    // 18, 24 -> 24
+    // 24, 30 -> 30
+    .reduce((a, b) => {
+        console.log(`Reduced with ${a} ${b}`)
+        return Math.max(a,b)
+    });
     //.reduce((a, b) => {return a + b});
+    //.reduce((a, b) => Math.min(a,b));
+    
+    
 
 console.log(val);
