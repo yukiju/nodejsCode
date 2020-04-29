@@ -34,4 +34,4 @@ console.log(billy.firstName);
 console.log(billy.__proto__);
 console.log(billy);
 
-console.log();
+//console.log();
