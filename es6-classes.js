@@ -40,3 +40,27 @@ class Student extends Person {
 const cindy = new Student('Cindy', new Date(), 'Billy School');
 cindy.sayHello();
 
+class CollegeStudent extends Student {
+    constructor(firstName, birthdate, schoolName, major) {
+        super(firstName, birthdate, schoolName);
+        this.major = major;
+    }
+
+    sayHello() {
+        console.log(`Hello my name is ${this.firstName} and I am mayoring \
+in ${this.major} at ${this.schoolName}`);
+    }
+
+    sayHello2(basicHello = false) {
+        if(basicHello) {
+            super.sayHello();
+            return;
+        }
+    }
+}
+
+const danny = new CollegeStudent('Danny', new Date(),
+                                    'the University of South Florida', 'Computer Engineering');
+danny.sayHello();
+danny.sayHello2(true);
+
