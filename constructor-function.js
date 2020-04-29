@@ -3,7 +3,8 @@
     approach to inheritance. This involved the inclusion of the 'new' keyword and
     a way of defining functions to create objects for us - these functions are referred
     to as 'constructor functions'. Creating a constructor function is easy - just
-    create a function that assigns values using 'this' and
+    create a function that assigns values using 'this' and call the function with
+    the 'new' keyword --- verify this section
 
 */
 
@@ -17,8 +18,26 @@ const Person = function(firstName, birthdate) {
     }
 }
 
+
+
 const abby = new Person('Abby', new Date());
+const billy = new Person('Billy', new Date());
 
 console.log(Person);
 console.log(abby);
+
+abby.sayHello();
+billy.sayHello();
+
+
+// Aside regarding resolution of 'this'
+const functionCaller = {
+    callFunction: function(f) { 
+        
+        console.log(this);
+        f();
+    }
+}
+
+functionCaller.callFunction(abby.sayHello);
 
