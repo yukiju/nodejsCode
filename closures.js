@@ -7,6 +7,8 @@
     Java has only partial support for closures, so doing tasks that might be easy using
     closures in JS may be challenging in Java. */
 
+
+// Factory pattern
 function getAbby() {
     // This object is accessible even after the function ends
     // through a closure - the object returned from this function
@@ -14,7 +16,7 @@ function getAbby() {
     const abby = {
         firstName: 'Abby',
         lastName: 'Adams',
-        
+        birthdate: new Date()
     };
 
     // What are we returning?
@@ -31,7 +33,10 @@ const abby = getAbby();
 
 // Should not be possible!
 abby.firstName = 'Billy';
+// This should not give us the right value
+console.log(abby.firstName);
 
+// This is the right way to call
 // This should be possible
 console.log(abby.getFirstName());
 console.log(abby.getLastName());
